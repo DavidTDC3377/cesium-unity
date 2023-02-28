@@ -7,6 +7,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.Networking;
 using UnityEngine.TextCore;
+using UnityEngine.Networking.NetCore
 
 #if ENABLE_INPUT_SYSTEM
 using UnityEngine.InputSystem.UI;
@@ -30,7 +31,7 @@ namespace CesiumForUnity
         // The delimiter refers to the string used to separate credit entries
         // when they are presented on-screen.
         private string _defaultDelimiter = " \u2022 ";
-
+.       private string _backupDelimiter = " \n ";
         internal string defaultDelimiter
         {
             get => this._defaultDelimiter;
